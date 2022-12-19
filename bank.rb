@@ -17,8 +17,8 @@ class Account
         puts "Mobile number : #{@mobile}"
         puts "Email Id : #{@email}"
         puts "Enter your pin :"
-        pass=gets.chomp
-        if pass==@password
+        pass=gets.to_i
+        if pass=password
             puts "Successfully Create a Bank Account "
         else 
             puts "Invalid Pin.Try Again"
@@ -46,7 +46,7 @@ class Account
         d=gets.to_i
         puts "Enter the password"
         e=gets
-        if(@id==d and @password==e)
+        if(id=d and password=e)
             puts "Amount of Debit : "
             f=rand(1000..10000)
             g=gets.to_i
@@ -61,7 +61,7 @@ class Account
         h=gets.to_i
         puts "Enter your password : "
         i=gets
-        if(@id==h && @password==i)
+        if(id=h and password=i)
             puts "Enter the Transfer Amount : "
             j=gets.to_i
             puts "Enter Transfer id"
@@ -77,8 +77,7 @@ class Account
         l=gets.to_i
         puts "Enter password"
         m=gets
-        puts "old password is #{m}"
-        if l==@id and m==@password
+        if l=id and m=password
             puts "Change your name "
             n=gets
             puts "Change Your Phone Number "
